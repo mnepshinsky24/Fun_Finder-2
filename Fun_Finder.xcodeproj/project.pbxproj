@@ -14,6 +14,8 @@
 		1860DBED2290E11500A8F4A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1860DBEB2290E11500A8F4A3 /* LaunchScreen.storyboard */; };
 		1860DBF82290E11500A8F4A3 /* Fun_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860DBF72290E11500A8F4A3 /* Fun_FinderTests.swift */; };
 		1860DC032290E11500A8F4A3 /* Fun_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860DC022290E11500A8F4A3 /* Fun_FinderUITests.swift */; };
+		1860DC1122915AC100A8F4A3 /* AddPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1860DC1022915AC100A8F4A3 /* AddPhotoViewController.swift */; };
+		18F5E29A22916F99008E7652 /* PhotoTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5E29922916F99008E7652 /* PhotoTableTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1860DBFE2290E11500A8F4A3 /* Fun_FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Fun_FinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1860DC022290E11500A8F4A3 /* Fun_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fun_FinderUITests.swift; sourceTree = "<group>"; };
 		1860DC042290E11500A8F4A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1860DC1022915AC100A8F4A3 /* AddPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoViewController.swift; sourceTree = "<group>"; };
+		18F5E29922916F99008E7652 /* PhotoTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 			children = (
 				1860DBDF2290E11400A8F4A3 /* AppDelegate.swift */,
 				1860DBE32290E11400A8F4A3 /* Main.storyboard */,
+				18F5E29922916F99008E7652 /* PhotoTableTableViewController.swift */,
 				1860DBE92290E11500A8F4A3 /* Assets.xcassets */,
 				1860DBEB2290E11500A8F4A3 /* LaunchScreen.storyboard */,
 				1860DBEE2290E11500A8F4A3 /* Info.plist */,
 				1860DBE62290E11400A8F4A3 /* Fun_Finder.xcdatamodeld */,
+				1860DC1022915AC100A8F4A3 /* AddPhotoViewController.swift */,
 			);
 			path = Fun_Finder;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1860DBE82290E11400A8F4A3 /* Fun_Finder.xcdatamodeld in Sources */,
+				1860DC1122915AC100A8F4A3 /* AddPhotoViewController.swift in Sources */,
 				1860DBE02290E11400A8F4A3 /* AppDelegate.swift in Sources */,
+				18F5E29A22916F99008E7652 /* PhotoTableTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,7 +37,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZNW-MM-fz3"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="K6Q-kh-5Pq">
                             <connections>
-                                <segue destination="le1-rA-8LY" kind="show" id="fZd-6E-vSh"/>
+                                <segue destination="le1-rA-8LY" kind="show" id="r93-fj-WEL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -49,7 +49,7 @@
         <!--Add New Photo-->
         <scene sceneID="fh2-yr-YNL">
             <objects>
-                <viewController id="le1-rA-8LY" sceneMemberID="viewController">
+                <viewController id="le1-rA-8LY" customClass="AddPhotoViewController" customModule="Fun_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2uv-MK-GJI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,16 +58,25 @@
                                 <rect key="frame" x="35" y="116" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="camera:" destination="le1-rA-8LY" eventType="touchUpInside" id="zey-bv-wnD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgl-CY-y0h">
                                 <rect key="frame" x="159" y="116" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="PhotoLibrary"/>
+                                <connections>
+                                    <action selector="photoLibrary:" destination="le1-rA-8LY" eventType="touchUpInside" id="5Ur-0f-UMY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aos-aF-5AZ">
                                 <rect key="frame" x="311" y="116" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="photoAlbum:" destination="le1-rA-8LY" eventType="touchUpInside" id="Vr0-Ic-34Z"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tulum-mexico" translatesAutoresizingMaskIntoConstraints="NO" id="zzo-w3-FBv">
                                 <rect key="frame" x="35" y="190" width="337" height="220"/>
@@ -94,6 +103,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CP1-UL-1el" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1259.4202898550725" y="-70.3125"/>
+        </scene>
+        <!--Photo Table Table View Controller-->
+        <scene sceneID="TP8-0i-Wh6">
+            <objects>
+                <tableViewController id="Beb-e5-TNL" customClass="PhotoTableTableViewController" customModule="Fun_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q75-ka-Stl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e40-ZW-AQy">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e40-ZW-AQy" id="OTu-H6-hSf">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Beb-e5-TNL" id="3tu-f0-oTQ"/>
+                            <outlet property="delegate" destination="Beb-e5-TNL" id="Mbh-Z0-Uhc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZvK-Rp-h2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="-67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="stm-H8-OJ4">
